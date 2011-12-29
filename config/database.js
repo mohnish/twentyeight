@@ -2,10 +2,10 @@
 var mysql = require('mysql');
 
 // Database configuration
-var user = 'root';
-var password = 'foo';
-var database = 'twenty8';
-var host = 'localhost';
+var user = '';
+var password = '';
+var database = '';
+var host = '';
 
 // Class to encapsulate the mysql object and
 // to create a mysql client
