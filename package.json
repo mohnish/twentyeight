@@ -1,0 +1,12 @@
+{
+    "name": "twenty8"
+  , "version": "0.0.1"
+  , "private": true
+  , "dependencies": {
+      "express": "2.5.2"
+    , "stylus": ">= 0.0.1"
+    , "jade": ">= 0.0.1"
+    , "mysql": ">= 0.9.5"
+    , "moment": ">= 1.2.0"
+  }
+}
