@@ -24,3 +24,8 @@ var MysqlConfig = function(mysql) {
 }
 
 exports.database = new MysqlConfig(mysql);
+
+// Sample Usage:
+// var database = require('../config/database').database;
+// var mysql = database.mysql;
+// var client = database.client;
