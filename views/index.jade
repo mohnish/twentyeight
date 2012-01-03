@@ -10,10 +10,7 @@ script
       oauth      : true,
     });
   };
-  (function(d){
-     var js, id = 'facebook-jssdk'; if (d.getElementById(id)) {return;}
-     js = d.createElement('script'); js.id = id; js.async = true;
-     js.src = "//connect.facebook.net/en_US/all.js";
-     d.getElementsByTagName('head')[0].appendChild(js);
-   }(document));
-div(class="fb-login-button", data-scope="email,user_checkins,user_about_me,user_birthday,user_hometown,user_location,user_photos,user_status,user_website") Login with Facebook
+
+fb:registration(fields="name,birthday,gender,location,email" 
+  redirect-uri="http://localhost:3000/profile"
+  width="530")
