@@ -1,16 +1,37 @@
-h1= title
-div(id="fb-root")
-script
-  window.fbAsyncInit = function() {
-    FB.init({
-      appId      : '166821513417475',
-      status     : true, 
-      cookie     : true,
-      xfbml      : true,
-      oauth      : true,
-    });
-  };
+div(class='topbar')
+  div(class='fill')
+    div(class='container')
+      a(class='brand', href='#') TwentyEight (28)
+      ul(class='nav')
+        li(class='active')
+          a(href='#') Home
+        li
+          a(href='#about') About
+        li
+          a(href='#contact') Contact
 
-fb:registration(fields="name,birthday,gender,location,email" 
-  redirect-uri="http://localhost:3000/profile"
-  width="530")
+div(class='container')
+  div(class='hero-unit')
+   h1 Twenty Eight (28)
+   p Your one stop place for fun news. Learn and play, both at the same time. Your experience here at TwentyEight is going to be fun.
+   a(id='learn-more', class='btn primary large', data-controls-modal='my-modal', data-backdrop='true, data-keyboard='true') Learn More &raquo;
+
+  div(class='row')
+    div(class='span6')
+      h2 Social Media
+      p What is hot in the world of social networking applications? To follow the latest news in social media, this is your stop.
+      a(id='display-social-media', class='btn primary') Display Social Media News &raquo;
+    
+    div(class='span5')
+      h2 Celebrity Gossip
+      p Who has married whom? Whom is Jennifer Aniston dating? What is Justin Bieber's latest venture? Come here to find out.
+      a(id='display-celebrity-news', class='btn primary') Display Celebrity News &raquo;
+    
+    div(class='span5')
+      h2 Comics
+      p Need some time to relax? Like comics? Then what're you waiting for?
+      a(id='display-comics', class='btn primary') Display Comics &raquo;
+
+  footer &copy; TwentyEight(28) 2011
+
+div()

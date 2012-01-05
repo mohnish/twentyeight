@@ -4,12 +4,13 @@
 
 var express = require('express'),
     routes = require('./routes'),
-    io = require('socket.io');
+    io = require('socket.io'),
+    Facebook = require('facebook-node-sdk');;
 
-var app = module.exports = express.createServer();
-io = io.listen(app);
+var app = module.exports = express.createServer(),
+    io = io.listen(app);
+
 // Configuration
-
 app.configure(function(){
   app.set('views', __dirname + '/views');
   app.set('view engine', 'jade');
@@ -17,6 +18,7 @@ app.configure(function(){
   app.use(express.methodOverride());
   app.use(express.cookieParser());
   app.use(express.session({ secret: 'whatcouldmysecretbe' }));
+  // app.use(Facebook.middleware({ appId: '166821513417475', secret: '2c3fa00ccfc0a632b761256f4664daa9' }));
   app.use(require('stylus').middleware({ src: __dirname + '/public' }));
   app.use(app.router);
   app.use(express.static(__dirname + '/public'));
@@ -35,8 +37,10 @@ app.configure('production', function(){
 // Index
 app.get('/', routes.index);
 
-// Profile
-app.get('/profile', routes.profile);
-
 app.listen(3000);
+
+io.sockets.on('connection', function(socket) {
+  socket.emit('welcome', { message: 'You have successfully connected to the server.' });
+});
+
 console.log("Express server listening on port %d in %s mode", app.address().port, app.settings.env);
