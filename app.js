@@ -41,6 +41,11 @@ app.listen(3000);
 
 io.sockets.on('connection', function(socket) {
   socket.emit('welcome', { message: 'You have successfully connected to the server.' });
+  socket.on('message', function(data) {
+    // Push it to a buffer and then emit a broadcast
+    io.sockets.emit('broadcast', {message: data.message});
+  });
+
 });
 
 console.log("Express server listening on port %d in %s mode", app.address().port, app.settings.env);

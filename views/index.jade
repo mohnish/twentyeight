@@ -1,37 +1,124 @@
 div(class='topbar')
   div(class='fill')
     div(class='container')
-      a(class='brand', href='#') TwentyEight (28)
+      a(class='brand rescue', href='#') TwentyEight (28)
       ul(class='nav')
-        li(class='active')
-          a(href='#') Home
         li
-          a(href='#about') About
+          a(href='#social-media', class='rescue') Social Media
         li
-          a(href='#contact') Contact
+          a(href='#celebrity-gossip', class='rescue') Celebrity Gossip
+        li
+          a(href='#comics', class='rescue') Comics
+        li
+          p Search &nbsp;
+            input(type='text', id='search', autocomplete='off')
+        li
+          a(id='contact', href='#') Contact Us
+        li
+          a(href='#celebrity-gossip', id='help', class='rescue') Help
 
 div(class='container')
   div(class='hero-unit')
    h1 Twenty Eight (28)
    p Your one stop place for fun news. Learn and play, both at the same time. Your experience here at TwentyEight is going to be fun.
-   a(id='learn-more', class='btn primary large', data-controls-modal='my-modal', data-backdrop='true, data-keyboard='true') Learn More &raquo;
+   a(id='learn-more', class='btn primary large', data-controls-modal='learn-more-modal', data-backdrop='true', data-keyboard='true') Learn More &raquo;
 
   div(class='row')
     div(class='span6')
       h2 Social Media
       p What is hot in the world of social networking applications? To follow the latest news in social media, this is your stop.
-      a(id='display-social-media', class='btn primary') Display Social Media News &raquo;
+      a(id='display-social-media', class='btn primary', href='#social-media') Go to Social Media News &raquo;
     
     div(class='span5')
       h2 Celebrity Gossip
       p Who has married whom? Whom is Jennifer Aniston dating? What is Justin Bieber's latest venture? Come here to find out.
-      a(id='display-celebrity-news', class='btn primary') Display Celebrity News &raquo;
+      a(id='display-celebrity-news', class='btn primary', href='#celebrity-gossip') Go to Celebrity News &raquo;
     
     div(class='span5')
       h2 Comics
       p Need some time to relax? Like comics? Then what're you waiting for?
-      a(id='display-comics', class='btn primary') Display Comics &raquo;
+      a(id='display-comics', class='btn primary', href='#comics') Go to Comics &raquo;
+
+
+  div(class='row')
+    div(class='span16 story-block', id='social-media') 
+      h3 Social Media
+      p
+        p
+          img(src='http://6.mshcdn.com/wp-content/gallery/fb/screenshotuse.jpg')
+        a(href='http://mashable.com/2012/01/04/facebook-banner-creators/', class='top-story') Facebook Timeline Customization: 5 Tools for Killer Cover Photos
+        p It’s been a long time coming, but Google has finally given the official go-ahead for businesses to create profiles on the Google+ social network. We have gone hands-on with the new option to offer you a simple walkthrough, demoing just how quick and easy it is to get set up on the service. Take a look through our image gallery above for our no-nonsense how-to. Once you’ve got yours set up, link us in the comments to your brand’s Google+ page. If you’re looking for inspiration, then take a look at what other brands have created in the gallery below.
+      
+      p
+        a(href='http://mashable.com/2011/11/08/how-to-google-plus-brand-page/', class='top-story') How to setup Google+ brand pages
+        p It’s been a long time coming, but Google has finally given the official go-ahead for businesses to create profiles on the Google+ social network. We have gone hands-on with the new option to offer you a simple walkthrough, demoing just how quick and easy it is to get set up on the service. Take a look through our image gallery above for our no-nonsense how-to. Once you’ve got yours set up, link us in the comments to your brand’s Google+ page. If you’re looking for inspiration, then take a look at what other brands have created in the gallery below.
+
+      p
+        a(href='http://mashable.com/2012/01/04/facebook-character-limit/', class='top-story') 10 Things You Can Fit Into Your 63,206-Character Facebook Status
+        p Following a slew of other major updates, Facebook announced in November that its users would be able to share status updates up to 63,206 characters long. That’s a little harder to visualize than Twitter’s 140-character limit. So, we measured 10 other textual things to determine whether they made Facebook‘s character cut. Did you know you can fit an entire movie script in your Facebook status? Or that you can share multiple copies of the U.S. Constitution? Find out which iconic texts you can squeeze into Facebook’s 63,206-character limit below. If you’re curious how Facebook arrived at this seemingly random number, Facebook engineer Bob Baldwin explained to ZDnet, “I set the exact limit to something nerdy. Facebook … Face Boo K … hex(FACE) – K … 64206 – 1000 = 63206.” In other words, Baldwin calculated the number using the hexadecimal numeral system: The hexadecimal value of “FACE” is 64,206. Then, Baldwin subtracted “K,” or “kilo-” (the prefix for 1,000), to arrive at 63,206.
+      
+      div(id='latest')
+        ...
+        p .
+        p .
+        p .
+        p .
+        p .
+        textarea(id='enter-chat', rows='2', cols='30')
+
+      
+      p
+        a(href='http://mashable.com/2012/01/04/walmart-buys-mobile-developer/', class='top-story') Walmart Buys Mobile Developer Small Society
+        p Walmart has purchased Small Society, a Portland-based mobile developer that’s built apps for Starbucks, Amazon, Whole Foods, ZipCar, the Democratic National Committee, and others. Financial terms were not disclosed in an announcement on the retail giant’s @WalmartLabs blog earlier Wednesday. Small Society’s team will join an existing @WalmartLabs location in Oregon, according to the post. Launched in 2011, @WalmartLabs is designed to create technologies that propel the multi-channel brand as a social-mobile commerce player in the years to come. The company also appears to be mounting an agency-like infrastructure that could bypass vendors, keeping some digital marketing development in-house at the Arkansas-based big box merchandiser. In late summer, the retailer acquired OneRiot, a Boulder, Col.-based firm that uses interest-level data from Twitter, Facebook, and other social media channels to target online ads. And last spring, Walmart bought social media and search platform Kosmix. Small Society was among the startups to receive support from Wieden+Kennedy’s startup incubator Portland Incubation Experiment, which ClickZ covered earlier this year. One of the mobile developer’s founders, James Keller, was previously an interactive strategist at W+K
+
+      p
+        a(href='http://mashable.com/2012/01/04/facebook-app-profile-pages-end/', class='top-story') Facebook Warning: App Profile Pages Set For Deletion
+        p Facebook App Profile Page managers have begun receiving notifications that their Profile Pages will be eliminated Feb. 1. Administrators can transfer Likes to their new Facebook Pages, if they take action in advance. “In December we announced to developers that we’ll remove App Profile Pages on Feb. 1, 2012 so that users will be directed straight to an app or a traditional Facebook Page when searching for it,” a Facebook spokesperson wrote Mashable in an email, referring to a Dec. 9, 2011 post on its Developers Blog. “In addition to lessening the amount of steps it takes for a user to get to an app, this move will also help eliminate the inconsistencies that exist between App Profile Pages and traditional Facebook Pages, such as different Insights, APIs, and distribution channels.” The social network warns that the opt-in process of transferring your Likes may take up to seven days. As long as you don’t already have a Facebook Page, you can transfer the vanity URL of your App Profile Page as well. Facebook will not, however, transfer Page content. If you manage a page, make sure to save all photos, posts and Insights you want to keep.
+  
+  div(class='row')
+    div(class='span16 story-block', id='celebrity-gossip') 
+      h3 Celebrity Gossip
+      p
+        p
+          img(src='http://media.zenfs.com/en-US/blogs/omgaline/310-demimoore-harpersbazaar_165127.jpg')
+        a(href='http://omg.yahoo.com/blogs/aline/demi-moore-never-imagined-being-called-too-thin-171455957.html', class='top-story') Demi Moore Never Imagined Being Called ‘Too Thin’
+        p Right after Demi Moore's announcement last fall that she was separating from husband of six years Ashton Kutcher, the media began focusing on something other than Kutcher's reported infidelities, the moving trucks at their home, and the couple's separate appearances. What started making headlines was the fact that Moore was looking painfully thin. In the February issue of Harper's Bazaar, the perennially petite Moore admits that, indeed, she's become seriously skinny lately. But she's accepted how she looks, even if the public hasn't, she tells the mag, "and that includes not just my weight but all of the things that come with your changing body as you age to now experiencing my body as extremely thin -- thin in a way that I never imagined somebody would be saying to me, 'You're too thin, and you don't look good,' " the 49-year-old actress says.
+      p
+        a(href='http://omg.yahoo.com/blogs/now/selena-gomez-opens-being-hated-justin-bieber-fans-193727863.html', class='top-story') Selena Gomez being hated by Justin Bieber fans
+        p Selena Gomez talks to a Baltimore radio station about her boyfriend's legions of devoted followers who openly dislike her. Find out what she thinks about his Beliebers! Plus, Daniel Craig steps out in a rather casual ensemble at the Paris premiere of "The Girl With The Dragon Tattoo," and Rachel McAdams tells Glamour magazine about her teen job at McDonald's. Selena Gomez talks to a Baltimore radio station about her boyfriend's legions of devoted followers who openly dislike her. Find out what she thinks about his Beliebers! Plus, Daniel Craig steps out in a rather casual ensemble at the Paris premiere of "The Girl With The Dragon Tattoo," and Rachel McAdams tells Glamour magazine about her teen job at McDonald's.
+
+      p
+        a(href='http://omg.yahoo.com/news/paris-hilton-ive-earned-1-3-billion-since-170246051.html', class='top-story') Paris Hilton: I've Earned $1.3 Billion Since 2005
+        p Paris Hilton is often criticized for being "famous for being famous," but the 30-year-old reality star says she's worked hard to amass her hefty fortune. PHOTOS: Paris Hilton's worst outfits ever "I'm involved in my products every step of the way. My fragrances are doing really well at the moment," Hilton tells FHM UK's January issue. "They've produced more than $1.3 billion in revenue since 2005." "I have 35 stores and 17 product lines. And then there's my racing team, my 14 fragrances and my new project, the Paris Hilton Beach Club chain. The first one is opening in the Philippines soon. It's going to have nightclubs, restaurants, bars, gyms. Everything really."
+
+      p
+        a(href='http://omg.yahoo.com/news/sinead-oconnor-calls-off-barry-herridge-divorce-night-163003622.html', class='top-story') Sinead O'Connor Calls Off Barry Herridge Divorce After Night of "Love Making"
+        p Sinead O'Connor's rollercoaster romance with Barry Herridge has taken another turn. PHOTOS: Hollywood's shortest marriages Though the 45-year-old singer recently announced plans to divorce Herridge, O'Connor announced they have reconciled via Twitter Tuesday. PHOTOS: Over-the-top celebrity weddings "Spent a beautiful evening of love making with none other than my husband," the Irish singer wrote. "We decided to be boyfriend and girlfriend again and stay married, but we did rush [into tying the knot]." O'Connor predicts they will be "sickeningly happy" together and plans to meet with a marriage counselor. She also hopes to move in with Herridge, 38, "in like a year, like regular people."
+
+      p
+        a(href='http://omg.yahoo.com/news/justin-timberlake-jessica-biel-engaged-140637023.html', class='top-story') Justin Timberlake and Jessica Biel Engaged!
+        p After a series of breakups and makeups, Justin Timberlake and Jessica Biel have finally decided to get married! Several insiders tell the new issue of Us Weekly (on stands Friday) that the couple of four and a half years became engaged in late December. PHOTOS: Justin and Jessica's romance through the years Timberlake, a six-time Grammy winner, popped the question to Biel, 29, in the mountains of Jackson, Wyoming. "Justin knows how much she loves snowboarding and the mountains, so it was the perfect place," one insider explains. VIDEO: Why Jessica "has the power" in their relationship After a brief three-month split in 2011, Biel made it clear that she wanted to spend her life with Timberlake, 30. "When they reunited, they had a conversation about taking the next step." PHOTOS: Justin's A-list dating history Another Timberlake insider adds that he's "never been happier" with the New Year's Eve actress. "He knew it was the right time to propose."
+  
+  div(class='row')
+    div(class='span16 story-block', id='comics') 
+      h3 Comic Time
+      div
+        img(src='http://imgs.xkcd.com/comics/cougars.png')
+        p Cougar
+      div
+        img(src='http://imgs.xkcd.com/comics/2012.png')
+        p 2012
+      div
+        img(src='http://imgs.xkcd.com/comics/wait_wait.png')
+        p Wait..Wait..!
 
   footer &copy; TwentyEight(28) 2011
 
-div()
+  div(id='learn-more-modal', class='modal hide fade in')
+    div(class='modal-header')
+      a(href='#', class='close') x
+      h3 About TwentyEight News Aggregator
+    div(class='modal-body')
+      p Aggregators reduce the time and effort needed to regularly check websites for updates, creating a unique information space or "personal newspaper". Once subscribed to a feed, an aggregator is able to check for new content at user-determined intervals and retrieve the update. The content is sometimes described as being "pulled" to the subscriber, as opposed to "pushed" with email or IM. Unlike recipients of some "pushed" information, the aggregator user can easily unsubscribe from a feed. Aggregator features are frequently built into portal sites, Web browsers, and email programs. The aggregator provides a consolidated view of the content in a single browser display or desktop application. Aggregators with podcasting capabilities can automatically download media files, such as MP3 recordings. In some cases, these can be automatically loaded onto portable media players (like iPods) when they are connected to the end-user's computer.
+    div(class='modal-footer')
+      a(href='#', class='btn primary') Wow. That's kewl!
