@@ -5,8 +5,12 @@ body {
   width: 270px;
   height: 210px;
 }
+#enter-chat,
 #latest {
-  display: block;
+  display: none;
+}
+#latest {
   max-height: 200px;
+  width: 600px;
   overflow: auto;
 }

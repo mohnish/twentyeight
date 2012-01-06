@@ -3,22 +3,36 @@ var socket = io.connect();
 helpMe = function() {
   $('#contact').attr('href', '#');
   $('#latest').hide();
+  $('#enter-chat').hide();
   $('#search').val('Enter Search');
 }
 
+scrollDown = function() {
+  $("#latest").scrollTop($("#latest")[0].scrollHeight);
+}
+
 $(document).ready(function() {
+
   // ON
   socket.on('broadcast', function(data) {
+    $('#latest').append('<p>' + data.message +'</p>');
+    scrollDown();
     console.log(data.message);
   });
-  // Later this should be used for showing availability
+
   socket.on('welcome', function(data) {
-    console.log(data.message);
+    var i; // initialize
+    for(i = 0; i < data.messages.length; i++) {
+      $('#latest').append('<p>' + data.messages[i] +'</p>');
+    }
+    scrollDown();
+    console.log(data.messages);
   });
 
   $('#enter-chat').keydown(function(e) {
     if (e.keyCode == '13') {
-      socket.emit('message', {message: $('#enter-chat').val() });
+      socket.emit('message', {message: $('#enter-chat').val().trim() });
+      $(this).val('');
     }
   });
 
@@ -32,6 +46,8 @@ $(document).ready(function() {
       // Open up the hidden chat box
       $('#contact').attr('href', '#latest');
       $('#latest').show();
+      $('#enter-chat').show();
+      scrollDown();
       $('#search').val('');
     } else {
       helpMe();

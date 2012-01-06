@@ -39,10 +39,19 @@ app.get('/', routes.index);
 
 app.listen(3000);
 
+// Holds previous messages
+var messageBuffer = [];
+
 io.sockets.on('connection', function(socket) {
-  socket.emit('welcome', { message: 'You have successfully connected to the server.' });
+  socket.emit('welcome', { messages: messageBuffer });
   socket.on('message', function(data) {
     // Push it to a buffer and then emit a broadcast
+    if(messageBuffer.length < 50) {
+      messageBuffer.push(data.message);
+    } else {
+      messageBuffer.shift();
+      messageBuffer.push(data.message);
+    }
     io.sockets.emit('broadcast', {message: data.message});
   });
 
