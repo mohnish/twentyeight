@@ -4,8 +4,8 @@
 
 var express = require('express'),
     routes = require('./routes'),
-    io = require('socket.io'),
-    Facebook = require('facebook-node-sdk');;
+    io = require('socket.io');
+    // Facebook = require('facebook-node-sdk');
 
 var app = module.exports = express.createServer(),
     io = io.listen(app);
@@ -37,7 +37,7 @@ app.configure('production', function(){
 // Index
 app.get('/', routes.index);
 
-app.listen(3000);
+app.listen(80);
 
 // Holds previous messages
 var messageBuffer = [];
