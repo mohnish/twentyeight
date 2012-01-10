@@ -36,7 +36,7 @@ app.configure('production', function(){
 // Index
 app.get('/', routes.index);
 
-app.listen(3000);
+app.listen(80);
 
 // Holds previous messages
 var messageBuffer = [];
