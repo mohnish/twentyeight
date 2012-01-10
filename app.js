@@ -4,8 +4,8 @@
 
 var express = require('express'),
     routes = require('./routes'),
-    io = require('socket.io');
-    // Facebook = require('facebook-node-sdk');
+    io = require('socket.io'),
+    password = require(__dirname + '/config/password').password();
 
 var app = module.exports = express.createServer(),
     io = io.listen(app);
@@ -18,7 +18,6 @@ app.configure(function(){
   app.use(express.methodOverride());
   app.use(express.cookieParser());
   app.use(express.session({ secret: 'whatcouldmysecretbe' }));
-  // app.use(Facebook.middleware({ appId: '166821513417475', secret: '2c3fa00ccfc0a632b761256f4664daa9' }));
   app.use(require('stylus').middleware({ src: __dirname + '/public' }));
   app.use(app.router);
   app.use(express.static(__dirname + '/public'));
@@ -37,7 +36,7 @@ app.configure('production', function(){
 // Index
 app.get('/', routes.index);
 
-app.listen(80);
+app.listen(3000);
 
 // Holds previous messages
 var messageBuffer = [];

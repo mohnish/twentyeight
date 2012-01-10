@@ -1,6 +1,6 @@
 /*
-  RENAME THIS FILE TO database.js and fill-in your details
-*/
+ * RENAME THIS FILE TO database.js and fill-in your details
+ */
 
 // Contains all the information about your database
 var mysql = require('mysql');
